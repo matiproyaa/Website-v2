@@ -56,7 +56,7 @@ input, select {
 }
 
 .extra-item {
-    flex: 1 1 48%;
+/*    flex: 1 1 48%;*/
     display: flex;
     align-items: center;
     gap: 10px;
