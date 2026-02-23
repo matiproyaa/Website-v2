@@ -6,6 +6,8 @@
     const quoteTotalEl = document.getElementById("quoteTotal");
     const labourSavedEl = document.getElementById("labourSaved");
     const extraCheckboxes = document.querySelectorAll(".extra-item input");
+    const redirectPage = document.getElementById("redirectPage");
+    /*let redirect = 0;*/
 
     function updateQuote() {
 
@@ -30,6 +32,11 @@
         //    ? `Labour saved by adding extras now: \u00A3${labourSaved}`
         //    : "";
     }
+
+    //if (redirect == 1) {
+    //    setTimeout(() => { }, 2000);
+    //    window.location.href = "index.html";
+    //}
 
     chainSelect.addEventListener("change", updateQuote);
 
@@ -73,8 +80,12 @@
         emailjs.send("service_eogyylh", "template_8z21655", templateParams)
             .then(function () {
                 const status = document.getElementById("statusMessage");
-                status.innerText = "Quote request sent successfully!";
+                status.innerText = "Quote request sent successfully! Redirecting...";
                 status.style.color = "green";
+
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 2000);
             })
             .catch(function (error) {
                 const status = document.getElementById("statusMessage");
@@ -82,6 +93,8 @@
                 status.style.color = "red";
                 console.error(error);
             });
+
     };
+
 
 })();
