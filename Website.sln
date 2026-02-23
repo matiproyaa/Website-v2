@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		main.css = main.css
+		quote.css = quote.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{105DCE72-A2FD-485C-8957-7235EFAB7AC8}"
+	ProjectSection(SolutionItems) = preProject
+		main.js = main.js
+		quote.js = quote.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{8E095610-B529-4DC8-B1C4-CC2373F54C95}"
+	ProjectSection(SolutionItems) = preProject
+		Images\img1.png = Images\img1.png
+		Images\img2.png = Images\img2.png
+		Images\img3.png = Images\img3.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+		quote.html = quote.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65C389A5-622A-4D04-867F-A3EFE4257FEE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N47 Quote Request</title>
+
+    <link rel="stylesheet" href="quote.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="quote.js" defer></script>
+
+</head>
+<body>
+
+    <div class="card">
+
+        <h2>N47 Timing Chain Quote</h2>
+
+        <text>Your Name</text>
+        <input type="text" id="customerName" placeholder="Name" required>
+        <text>Your Email</text>
+        <input type="email" id="customerEmail" placeholder="Email" required>
+        <text>Your Phone Number</text>
+        <input type="number" id="customerNumber" placeholder="Phone Number" required>
+        <text>Car Registration Plate</text>
+        <input type="text" id="carReg" placeholder="Car Registration" required>
+
+        <text>Chain Brand</text>
+        <select id="chainBrand" required>
+            <option value="">Select Timing Chain Option</option>
+            <option value="FAI Timing Chain" data-price="1100" data-stars="4/5">
+                FAI Timing Chain (4/5) — £1,100
+            </option>
+            <option value="Febi Bilstein" data-price="1350" data-stars="4/5">
+                Febi Bilstein (4/5) — £1,350
+            </option>
+            <option value="IWIS OEM BMW" data-price="1600" data-stars="5/5">
+                IWIS OEM BMW (5/5) — £1,600
+            </option>
+        </select>
+
+        <div class="extras-section">
+            <h3>Optional Extras</h3>
+
+            <div class="extras-row">
+
+                <label class="extra-item">
+                    <img src="images/coolantflange.png" alt="Coolant Flange">
+                    <input type="checkbox"
+                           value="Coolant Flange"
+                           data-cost="60"
+                           data-laboursave="40">
+                    <span>
+                        Coolant Flange
+                        <small>Recommended +£60</small>
+                    </span>
+                </label>
+
+                <label class="extra-item">
+                    <img src="images/oilfilterhousing.png" alt="Oil Filter Housing">
+                    <input type="checkbox"
+                           value="Oil Filter Housing Gasket"
+                           data-cost="90"
+                           data-laboursave="80">
+                    <span>
+                        Oil Filter Housing Gasket
+                        <small>Highly Recommended +£90</small>
+                    </span>
+                </label>
+
+                <label class="extra-item">
+                    <img src="images/waterpumpandthermostat.png" alt="Water Pump / Thermostat">
+                    <input type="checkbox"
+                           value="Water Pump / Thermostat"
+                           data-cost="150"
+                           data-laboursave="40">
+                    <span>
+                        Water Pump / Thermostat
+                        <small>+£150</small>
+                    </span>
+                </label>
+
+                <label class="extra-item">
+                    <img src="images/Clutchreplacnemt.png" alt="Clutch">
+                    <input type="checkbox"
+                           value="Clutch Replacement"
+                           data-cost="300"
+                           data-laboursave="400">
+                    <span>
+                        Clutch Replacement
+                        <small>Recommended +£300</small>
+                    </span>
+                </label>
+
+            </div>
+        </div>
+
+        <div class="quote-summary">
+            <p id="quoteTotal">Estimated Quote Total: £0 VAT Included</p>
+            <!--<p id="labourSaved"></p>-->
+        </div>
+
+        <button onclick="sendEmail()">Request Quote</button>
+        <p id="statusMessage"></p>
+
+    </div>
+
+</body>
+</html>
