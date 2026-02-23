@@ -1,4 +1,11 @@
-﻿(function () {
+﻿const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+(function () {
 
     emailjs.init("ClZV07kpW_Z4pce_u");
 

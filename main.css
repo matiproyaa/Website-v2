@@ -1,15 +1,91 @@
 ﻿/* General Reset */
-* {
+/** {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}
+}*/
 
 body {
-    background: #f4f6f8;
-    color: #2c3e50;
-    padding: 10px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+}
+
+/* NAV CONTAINER */
+nav {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* LOGO */
+.logo {
+    font-weight: 600;
+    font-size: 18px;
+    color: #111;
+}
+
+/* LINKS */
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+    .nav-links a {
+        text-decoration: none;
+        color: #111;
+        font-weight: 500;
+        transition: 0.2s ease;
+    }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        display: none;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+    .hamburger {
+        display: block;
+    }
 }
 
 /* Hero Section */
@@ -22,7 +98,7 @@ body {
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     padding: 40px 20px;
-    margin: 0px auto;
+    margin: 80px auto auto auto;
     max-width: 1200px;
     text-align: center;
 }
