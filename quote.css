@@ -75,6 +75,10 @@ input, select {
     margin-bottom: 20px;
 }
 
+.extras-section p {
+    
+}
+
 .extras-row {
     display: flex;
     flex-wrap: wrap;
@@ -115,10 +119,27 @@ input, select {
             box-shadow: 0 0 10px rgba(52,199,89,0.2);
         }
 
-    .extra-item small {
+
+    .extra-item maintext {
+        font-weight: 500;
+        color: #1c1c1e;
+        font-size: 18px;
+/*        text-decoration: underline;
+        text-transform: capitalize;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;*/
+    }
+
+    .extra-item smallgreen {
         display: block;
         font-size: 12px;
         color: #34c759;
+    }
+
+    .extra-item smallblack {
+        display: block;
+        font-size: 12px;
+        color: #000000;
     }
 
 /* QUOTE SUMMARY */
